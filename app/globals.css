@@ -296,6 +296,6 @@ width: 100vw;
 }
 @media (max-width: 400px) {
 .landing-img {
-  background-position: -90px 90px;
+  background-position: -70px 90px;
 }
 }
