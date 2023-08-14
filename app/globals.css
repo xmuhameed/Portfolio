@@ -263,7 +263,7 @@ width: 100vw;
   flex-direction: column;
 }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
 .hire-btn {
   margin-top: 0.4rem;
 }
@@ -294,7 +294,7 @@ width: 100vw;
   background-position: -100px 90px;
 }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
 .landing-img {
   background-position: -70px 90px;
 }
