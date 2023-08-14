@@ -24,6 +24,9 @@ export const NavbarM = () => {
             <AiOutlineClose size="3rem" />
           </button>
             <div className="z-9999 position-absolute navLinksM">
+              <Link className="navLink" href="/">
+                Home
+              </Link>
               <Link className="navLink" href="/portfolio">
                 Portfolio
               </Link>
