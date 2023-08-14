@@ -263,6 +263,17 @@ width: 100vw;
   margin-top: 1.5rem;
 }
 }
+@media (max-width: 400px) {
+.hire-btn {
+  margin-top: 0.4rem;
+}
+.resume {
+  margin-top: 0.6rem;
+}
+.social-icons {
+  top: -3vh;
+}
+}
 .landing-img {
   background-image: url(../public/landing.png);
   background-size: cover;
@@ -281,5 +292,10 @@ width: 100vw;
 @media (max-width: 767px) {
 .landing-img {
   background-position: -100px 90px;
+}
+}
+@media (max-width: 400px) {
+.landing-img {
+  background-position: -90px 90px;
 }
 }
