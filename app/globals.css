@@ -260,7 +260,7 @@ width: 100vw;
   left: 0;
   width: fit-content;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 }
 @media (max-width: 450px) {
