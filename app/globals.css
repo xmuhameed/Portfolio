@@ -10,10 +10,28 @@
   --Orang: #EAC696;
   --AltMain: #AEBDCA;
   --Main: #7895B2;
+  --White: #fff;
+  --background: #fff;
+  --contact-c:#fff;
+  --contact-b:#E9B384;
+  --contact-h:#EAC696;
+  --navH: #61677A;
+}
+[data-theme="dark"] {
+  --background: #272829;
+  --AltBeige: #fff;
+  --AltDark: #AEBDCA;
+  --Dark: #eee;
+  --Orang: #D8D9DA;
+  --contact-c:#000;
+  --contact-b:#D8D9DA;
+  --contact-h:#fff;
+  --navH:#aaaaaa;
 }
 body {
   width: 100vw;
   overflow-x: hidden;
+  background-color: var(--background);
 }
 .z-99 {
   z-index: 99;
@@ -48,7 +66,7 @@ body {
   -o-transition: 0.3s;
 }
 .navLink:hover {
-  color: var(--AltDark);
+  color: var(--navH);
 }
 .logo {
   width: 80px;
@@ -70,8 +88,8 @@ body {
   -o-transform: scale(1.07);
 }
 .contact-btn {
-  color: #fff;
-  background-color: var(--AltBeige);
+  color: var(--contact-c);
+  background-color: var(--contact-b);
   border-radius: 100px;
   transition: 0.3s;
   -webkit-border-radius: 100px;
@@ -84,14 +102,13 @@ body {
   -o-transition: 0.3s;
 }
 .contact-btn:hover {
-  background-color: var(--Orang);
-  color: #fff;
+  background-color: var(--contact-h);
 }
 .navButton, .navLinksM {
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navLinks {
 display: none;
 }
@@ -102,7 +119,7 @@ display: none;
     margin-left: auto;
   }
 .navButton {
-  color: #61677A;
+  color: var(--AltDark);
   display: inline-block;
   position: absolute;
   left: 3vw;
@@ -135,7 +152,7 @@ display: none;
   -o-border-radius: 20px;
 }
 .navLink {
-  color: #fff;
+  color: var(--White);
 }
 .navLink:not(:last-child) {
   border-bottom: 1px solid #aaa;
@@ -224,7 +241,7 @@ width: 100vw;
   font-size: 1.9rem;
 }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 .p-content {
   margin-top: 20vh;
 }
@@ -284,12 +301,16 @@ width: 100vw;
   top: 0;
   z-index: -1;
 }
+[data-theme="dark"] .landing-img {
+  background-image: url(../public/landing-1.png);
+  opacity: 0.7;
+}
 @media (max-width: 992px) {
 .landing-img {
   background-position: 80px -40px;
 }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 .landing-img {
   background-position: -100px 90px;
 }
@@ -298,4 +319,117 @@ width: 100vw;
 .landing-img {
   background-position: -70px 90px;
 }
+}
+
+
+.dark_mode {
+    margin-top: -20px;
+    margin-right: 15px;
+    position: absolute;
+    top: 35px;
+    right: 13vw;
+    z-index: 9999;
+}
+@media (max-width: 1199px) {
+.dark_mode {
+  right: 19vw;
+}
+}
+@media (max-width: 1099px) {
+.dark_mode {
+  right: 16vw;
+}
+}
+@media (max-width: 992px) {
+.dark_mode {
+  right: 25vw;
+}
+}
+@media (max-width: 892px) {
+.dark_mode {
+  right: 23vw;
+}
+}
+@media (max-width: 768px) {
+.dark_mode {
+  left: 28vw;
+}
+}
+@media (max-width: 650px) {
+.dark_mode {
+  left: 22vw;
+}
+}
+@media (max-width: 450px) {
+.dark_mode {
+  left: 20vw;
+}
+}
+@media (max-width: 300px) {
+.dark_mode {
+  left: 24vw;
+}
+}
+.dark_mode_label {
+    width: 65px;
+    height: 34px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.dark_mode_label:after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.dark_mode_input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.dark_mode_input:checked + .dark_mode_label {
+    background: #242424;
+}
+.dark_mode_input:checked + .dark_mode_label:after {
+    left: 62px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.dark_mode_label:active:after {
+    width: 30px;
+}
+
+.dark_mode_label svg {
+    position: absolute;
+    width: 20px;
+    top: 8px;
+    z-index: 100;
+}
+.dark_mode_label .sun {
+    left: 5.5px;
+    fill: #fff;
+    transition: 0.3s;
+}
+.dark_mode_label .moon {
+    left: 37px;
+    fill: transparent;
+    transition: 0.3s;
+}
+.dark_mode_input:checked + .dark_mode_label .sun {
+    fill: transparent;
+}
+.dark_mode_input:checked + .dark_mode_label .moon {
+    fill: #fff;
 }

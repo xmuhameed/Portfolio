@@ -16,7 +16,7 @@ export default function Home() {
     <div className="container landing">
       <div className="row vh-100">
         <div className="col-6 landing-content p-content z-99">
-          <h1>Hey, i'm</h1>
+          <h1>Hi, i'm</h1>
           <h1>
             <span> Mohamed Mostafa</span>
           </h1>

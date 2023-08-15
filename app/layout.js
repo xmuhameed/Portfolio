@@ -2,7 +2,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { ParticlesBackground } from '@/client/ParticlesBackground'
+// import { ParticlesBackground } from '@/client/ParticlesBackground'
+import { DarkMode } from '@/client/DarkMode'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,11 +13,12 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
+        <DarkMode />
         <Navbar className="vw-100" />
-        <ParticlesBackground />
         {children}
         <Footer />
       </body>
