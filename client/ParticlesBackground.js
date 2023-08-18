@@ -1,5 +1,4 @@
 'use client'
-import Document from "next/document";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim"; 
@@ -141,7 +140,7 @@ export const ParticlesBackground = (props) => {
           options={{
             particles: {
               number: {
-                value: 100,
+                value: 130,
                 density: {
                   enable: true,
                   value_area: 800,
