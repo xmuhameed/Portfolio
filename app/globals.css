@@ -1,5 +1,6 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../app/styles/TextShaper.css';
+@import './portfolio/porfolio.css';
 
 :root {
   --Dark: #272829;
@@ -162,12 +163,26 @@ display: none;
 height: 85vh;
 width: 100vw;
 }
+.page-title {
+  font-weight: 900;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  color: var(--Orang);
+}
+@media (max-width: 768px) {
+  .page-title {
+    left: 20%;
+  }
+}
 .p-content {
   margin-top: 25vh;
   height: fit-content;
 }
 .landing-content h1 {
   font-size: 4rem;
+  width: fit-content;
+  display: inline-block;
   color: var(--AltDark);
 }
 .landing-content h1 span {
