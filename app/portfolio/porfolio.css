@@ -5,7 +5,7 @@
 .project-card {
   height: 300px;
 }
-@media (max-width: 1200px) {
+@media(max-width: 1200px) {
   .portfolioPage {
     margin-top: 30vh;
     margin-bottom: 10vh;
@@ -131,43 +131,3 @@
 .card .content a:hover {
     color: var(--Main);
 }
-
-/* images */
-
-/* .img-1 .project-1 {
- background-image: url(../../public/project-1.png);
-}
-.img-2 .project-2 {
-  background-image: url(../../public/project-2.png);
-}
-.img-3 .project-3 {
-  background-image: url(../../public/project-3.png);
-}
-.img-4 .project-4 {
-  background-image: url(../../public/project-4.png);
-}
-.img-5 .project-5 {
-  background-image: url(../../public/project-5.png);
-}
-.img-6 .project-6 {
-  background-image: url(../../public/project-6.png);
-}
-.img-7 .project-7 {
-  background-image: url(../../public/project-7.png);
-}
-.img-8 .project-8 {
-  background-image: url(../../public/project-8.png);
-}
-.img-1 .project-1,
-.img-2 .project-2,
-.img-3 .project-3,
-.img-4 .project-4,
-.img-5 .project-5,
-.img-6 .project-6,
-.img-7 .project-7,
-.img-8 .project-8 {
-  background-size: cover;
-  background-position: center;
-  height: 160px;
-  max-width: 100%;
-} */
