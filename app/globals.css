@@ -48,12 +48,12 @@ padding: 0;
   --contact-b:#D8D9DA;
 }
 html {
-  width: 100vw;
   overflow-x: hidden;
   box-sizing: border-box;
   margin: 0;
 }
 body {
+  width: 100%;
   margin: 0;
   line-height: inherit;
   background-color: var(--background);
