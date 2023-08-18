@@ -35,12 +35,11 @@
 .card:hover {
   height: 300px;
   z-index: 99999;
-  margin-bottom: 150px;
-  transform: translateY(30%);
-  -webkit-transform: translateY(30%);
-  -moz-transform: translateY(30%);
-  -ms-transform: translateY(30%);
-  -o-transform: translateY(30%);
+  transform: translateY(20%);
+  -webkit-transform: translateY(20%);
+  -moz-transform: translateY(20%);
+  -ms-transform: translateY(20%);
+  -o-transform: translateY(20%);
 }
 .card .image {
   position: relative;
