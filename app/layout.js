@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import './globals.css'
 import { Inter } from 'next/font/google'
-// import { ParticlesBackground } from '@/client/ParticlesBackground'
 import { DarkMode } from '@/client/DarkMode'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar className="vw-100" />
+        <Navbar className="w-100" />
         <DarkMode />
         {children}
         <Footer />

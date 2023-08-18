@@ -13,7 +13,7 @@ import {
 export default function Home() {
   return (
     <div className="container landing">
-      <div className="row vh-100">
+      <div className="row">
         <div className="col-6 landing-content p-content z-99">
           <h1>Hi, i'm</h1>
           <h1>
