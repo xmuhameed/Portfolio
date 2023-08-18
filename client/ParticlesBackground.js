@@ -140,23 +140,23 @@ export const ParticlesBackground = (props) => {
           options={{
             particles: {
               number: {
-                value: 130,
+                value: 4,
                 density: {
                   enable: true,
                   value_area: 800,
                 },
               },
               color: {
-                value: "#000000",
+                value: "#acb1d6",
               },
               shape: {
-                type: "circle",
+                type: "polygon",
                 stroke: {
                   width: 0,
-                  color: "#000000",
+                  color: "#000",
                 },
                 polygon: {
-                  nb_sides: 5,
+                  nb_sides: 6,
                 },
                 image: {
                   src: "img/github.svg",
@@ -165,44 +165,44 @@ export const ParticlesBackground = (props) => {
                 },
               },
               opacity: {
-                value: 1,
+                value: 0.14958038764938364,
                 random: true,
                 anim: {
-                  enable: true,
+                  enable: false,
                   speed: 1,
-                  opacity_min: 0,
+                  opacity_min: 0.1,
                   sync: false,
                 },
               },
               size: {
-                value: 3,
-                random: true,
+                value: 100,
+                random: false,
                 anim: {
-                  enable: false,
-                  speed: 4,
-                  size_min: 0.3,
+                  enable: true,
+                  speed: 10,
+                  size_min: 40,
                   sync: false,
                 },
               },
               line_linked: {
                 enable: false,
-                distance: 150,
+                distance: 200,
                 color: "#ffffff",
-                opacity: 0.4,
-                width: 1,
+                opacity: 1,
+                width: 2,
               },
               move: {
                 enable: true,
-                speed: 1,
+                speed: 3,
                 direction: "none",
-                random: true,
+                random: false,
                 straight: false,
                 out_mode: "out",
                 bounce: false,
                 attract: {
                   enable: false,
                   rotateX: 600,
-                  rotateY: 600,
+                  rotateY: 1200,
                 },
               },
             },
@@ -210,11 +210,11 @@ export const ParticlesBackground = (props) => {
               detect_on: "canvas",
               events: {
                 onhover: {
-                  enable: true,
-                  mode: "bubble",
+                  enable: false,
+                  mode: "repulse",
                 },
                 onclick: {
-                  enable: true,
+                  enable: false,
                   mode: "repulse",
                 },
                 resize: true,
@@ -227,14 +227,14 @@ export const ParticlesBackground = (props) => {
                   },
                 },
                 bubble: {
-                  distance: 250,
-                  size: 0,
+                  distance: 400,
+                  size: 40,
                   duration: 2,
-                  opacity: 0,
+                  opacity: 8,
                   speed: 3,
                 },
                 repulse: {
-                  distance: 400,
+                  distance: 200,
                   duration: 0.4,
                 },
                 push: {

@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import { FiSun } from "react-icons/fi";
-import { GoMoon } from "react-icons/go";
+import { GoMoon, GoSun } from "react-icons/go";
 import { ParticlesBackground } from "./ParticlesBackground";
 
 export const DarkMode = () => {
@@ -33,8 +32,8 @@ export const DarkMode = () => {
           onChange={toggler}
         />
         <label className="dark_mode_label" for="darkmode-toggle">
-          <FiSun className="sun" />
-          <GoMoon className="moon" />
+          <GoSun className="sun" size="2.5rem" />
+          <GoMoon className="moon" size="2.5rem" />
         </label>
       </div>
     </>
