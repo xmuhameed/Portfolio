@@ -210,6 +210,11 @@ width: 90vw;
   margin-top: 25vh;
   height: fit-content;
 }
+@media (max-width: 768px) {
+.p-content {
+  height: 85vh;
+}
+}
 .landing-content h1 {
   font-size: 4rem;
   width: fit-content;
