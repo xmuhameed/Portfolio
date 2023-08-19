@@ -1,6 +1,7 @@
 'use client'
 import React, { Children } from 'react'
 import { motion, useAnimationControls, transform } from 'framer-motion';
+
 export function TextSpan () {
     const sensitive = " Mohamed".split("");
     return (
