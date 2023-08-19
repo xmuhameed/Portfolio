@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import TypingText from '@/client/TypingText';
+import TypingText from '@/components/TypingText';
 import { AiOutlineDownload } from "react-icons/ai";
 import {
   BiLogoGithub,

@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { DarkMode } from '@/client/DarkMode'
+import { DarkMode } from '@/components/DarkMode'
 
 const inter = Inter({ subsets: ['latin'] })
 
