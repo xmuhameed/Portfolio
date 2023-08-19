@@ -30,6 +30,12 @@
   filter: blur(2px);
   -webkit-filter: blur(2px);
 }
+@media(max-width: 768px) {
+.portfolioPage:hover .project-card:not(:hover) {
+  filter: none;
+  -webkit-filter: none;
+}
+}
 .card {
   position: relative;
   width: 300px;
