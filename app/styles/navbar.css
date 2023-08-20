@@ -1,0 +1,126 @@
+.navBar-cont {
+  top: 0;
+  left: 53%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.navBar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+.navLink {
+  text-decoration: none;
+  color: var(--Dark);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.navLink:hover {
+  color: var(--5);
+}
+.logo {
+  width: 80px;
+  height: 80px;
+  display: block;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.logo:hover,
+.navLink:hover {
+  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+  -moz-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  -o-transform: scale(1.07);
+}
+.contact-btn {
+  color: var(--hire-c);
+  background-color: var(--hire-b);
+  border-radius: 100px;
+  transition: 0.3s;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.contact-btn:hover {
+  background-color: var(--2);
+  color: var(--hire-c);
+}
+.navButton, .navLinksM {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+display: none;
+}
+  .contact-btn {
+    display: none;
+  }
+  .logo-holder {
+    margin-left: auto;
+  }
+.navButton {
+  color: var(--altdark);
+  display: inline-block;
+  position: absolute;
+  left: 3vw;
+  top: 5px;
+}
+.navButton:hover {
+  color: var(--nav-btn);
+}
+.navLinksM {
+  top: 70px;
+  left: 7.5vw;
+  width: 85vw;
+  height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: var(--nav-bg);
+  opacity: 0.9;
+  padding: 4px 10px 6px;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.navLink {
+  color: var(--nav-l);
+}
+.navLink:hover {
+  color: var(--nav-h);
+}
+.navLink:not(:last-child) {
+    margin-right: 20px;
+    padding-right: 20px;
+}
+}
+.closeNav {
+height: 85vh;
+width: 90vw;
+}

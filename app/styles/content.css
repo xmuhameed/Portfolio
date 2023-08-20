@@ -1,0 +1,97 @@
+.content-page {
+    padding: 11vh;
+    margin-top: 10vh;
+}
+.left-contact .social-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-title, .contact-title + p, .left-contact > div {
+    display: block;
+    width: fit-content;
+    margin: 0 auto
+}
+.contact-title + p {
+    color: var(--Dark);
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.contact-title {
+   color: var(--Dark);
+   font-family: 'Bebas Neue', cursive;
+   font-size: 5em;
+   font-weight: 900;
+   background-image: linear-gradient(var(--4), var(--4));
+   background-size: 100% 10px;
+   background-repeat: no-repeat;
+   background-position: 100% 0%;
+   margin-bottom: 20px;
+   transition: background-size .7s, background-position .5s, color 2s ease-in-out;
+   -webkit-transition: background-size .7s, background-position .5s, color 2s ease-in-out;
+   -moz-transition: background-size .7s, background-position .5s, color 2s ease-in-out;
+   -ms-transition: background-size .7s, background-position .5s, color 2s ease-in-out;
+   -o-transition: background-size .7s, background-position .5s, color 2s ease-in-out;
+}
+.contact-title:hover {
+  background-size: 100% 100%;
+  background-position: 0% 100%;
+  transition: background-position .7s, background-size .5s ease-in-out;
+  color: #fff;
+}
+.form-title {
+display: block;
+width: fit-content;
+margin: 0 auto 30px;
+color: var(--title);
+}
+.in-put {
+background-color: transparent;
+border: none;
+border-bottom: 1px solid #ccc;
+margin-bottom: 50px;
+padding: 10px;
+}
+.in-put:focus {
+    outline: none;
+}
+.messege-area {
+    padding-bottom: 100px;
+}
+.form-p {
+    width: 50%;
+}
+@media (max-width: 1199px) {
+.form-p {
+    width: 75%;
+}
+}
+@media (max-width: 992px) {
+.form-p {
+    width: 90%;
+}
+}
+@media (max-width: 768px) {
+.content-page {
+    text-align: center;
+}
+.left-contact {
+    margin-bottom: 50px;
+}
+.left-contact .social-i:nth-child(3), .left-contact .social-i:nth-child(6) {
+margin-right: 0 !important;
+}
+.form-p {
+    width: 100%;
+}
+.contact-title {
+    font-size: 2rem;
+}
+.form-title{
+    font-size: 1.2rem;
+}
+.in-put {
+    margin-bottom: 35px;
+}
+}
