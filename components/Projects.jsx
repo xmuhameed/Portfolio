@@ -1,8 +1,8 @@
 "use client"
-import { PiLinkSimpleBold, PiGithubLogo } from "react-icons/pi";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { PiLinkSimpleBold, PiGithubLogo } from "react-icons/pi";
 import Image from "next/image";
 import project1 from "../public/project-1.png";
 import project2 from "../public/project-2.png";

@@ -1,14 +1,25 @@
 'use client'
 import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineAlignLeft, AiOutlineClose } from "react-icons/ai";
-
+import {
+  AiFillDatabase,
+  AiFillHome,
+  AiFillMail,
+  AiOutlineAlignLeft,
+  AiOutlineClose,
+} from "react-icons/ai";
+import { BsFillPersonFill } from "react-icons/bs";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 
 export const NavbarM = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
     const [ButtonActive, setButtonActive] = useState(false)
-
     const ActiveButton = () => {setButtonActive(true)};
     const unActiveButton = () => {setButtonActive(false)};
 
@@ -23,23 +34,23 @@ export const NavbarM = () => {
           <button className="navButton btn" onClick={unActiveButton}>
             <AiOutlineClose size="3rem" />
           </button>
-            <div className="z-9999 position-absolute navLinksM">
-              <Link className="navLink" href="/">
-                Home
-              </Link>
-              <Link className="navLink" href="/portfolio">
-                Portfolio
-              </Link>
-              <Link className="navLink" href="/servics">
-                Services
-              </Link>
-              <Link className="navLink" href="/about">
-                About
-              </Link>
-              <Link className="navLink" href="/contact">
-                Contact
-              </Link>
-            </div>
+          <div
+            className="z-9999 position-absolute navLinksM"
+            data-aos="fade-right"
+          >
+            <Link className="navLink" href="/">
+              <AiFillHome />
+            </Link>
+            <Link className="navLink" href="/portfolio">
+              <AiFillDatabase />
+            </Link>
+            <Link className="navLink" href="/about">
+              <BsFillPersonFill />
+            </Link>
+            <Link className="navLink" href="/contact">
+              <AiFillMail />
+            </Link>
+          </div>
           <div onClick={unActiveButton} className="closeNav z-999"></div>
         </>
       )}
