@@ -1,4 +1,3 @@
-
 import { Projects } from "@/components/Projects";
 import TypingHeader from "./TypingHeader";
 
