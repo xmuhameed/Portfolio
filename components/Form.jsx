@@ -2,11 +2,19 @@
 import { useState } from "react";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 
 export const Form = () => {
-    const [Mail, setMail] = useState(true)
- const form = useRef();
+  const [Mail, setMail] = useState(true)
+  const contactToggler = (e) => {
+    if (e.target.checked) {
+      setMail(false);
+    } else {
+      setMail(true);
+    }
+  };
 
+ const form = useRef();
  const sendEmail = (e) => {
    e.preventDefault();
 
@@ -25,7 +33,7 @@ export const Form = () => {
          console.log(error.text);
        }
      );
- };
+  };
 return (
   <form
     ref={form}
@@ -38,32 +46,30 @@ return (
       placeholder="Your Name"
       name="from_name"
     />
-    {Mail ? (
-      <input
-        className="in-put form-p"
-        type="email"
-        placeholder="Your Email"
-        name="from_contact"
-      />
-    ) : (
-      <input
-        className="in-put form-p phone-input"
-        type="phone"
-        placeholder="Your Phone"
-        name="from_contact"
-      />
-    )}
+    <input
+      className="in-put form-p"
+      type="email"
+      placeholder={Mail ? "Your Email" : "Your Phone Number"}
+      name="from_contact"
+      id="email-toggle"
+    />
+    <input
+      type="checkbox"
+      className="contact-input"
+      id="contact-toggle"
+      onChange={contactToggler}
+    />
+    <label className="contact_label" for="contact-toggle">
+      <AiOutlineMail className="email" size="1.5rem" />
+      <AiOutlinePhone className="phone" size="1.5rem" />
+    </label>
     <input
       className="in-put form-p messege-area"
       type="text"
       placeholder="Your Message"
       name="message"
     />
-    <input
-      className="btn btn-primary submit form-p"
-      type="submit"
-      value="Send"
-    />
+    <input className="btn submit form-p" type="submit" value="Send" />
   </form>
 );
 }
