@@ -88,10 +88,14 @@ color: var(--Dark);
 .form-p {
     width: 50%;
 }
+.phone-input {
+padding: 0;
+}
 .PhoneInputInput {
 border: none;
 background-color: transparent;
 color: var(--Dark);
+padding: 10px;
 }
 .PhoneInputInput:focus {
 outline: none;
