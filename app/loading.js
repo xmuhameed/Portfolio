@@ -7,8 +7,8 @@ const loading = () => {
     <div className="d-flex justify-content-center align-items-center vh-100 c-black">
       <Image
         src={loader}
-        width={100}
-        height={100}
+        width={70}
+        height={70}
       />
     </div>
   );
