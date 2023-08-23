@@ -2,13 +2,13 @@
 import Link from "next/link";
 import { useState } from "react";
 import {
-  AiFillDatabase,
-  AiFillHome,
-  AiFillMail,
   AiOutlineAlignLeft,
   AiOutlineClose,
+  AiOutlineHome,
+  AiOutlineMail,
 } from "react-icons/ai";
-import { BsFillPersonFill } from "react-icons/bs";
+import { BsPersonVcard } from "react-icons/bs";
+import { CgDatabase } from "react-icons/cg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -39,16 +39,16 @@ export const NavbarM = () => {
             data-aos="fade-right"
           >
             <Link className="navLink" href="/">
-              <AiFillHome />
+              <AiOutlineHome />
             </Link>
             <Link className="navLink" href="/portfolio">
-              <AiFillDatabase />
+              <CgDatabase />
             </Link>
             <Link className="navLink" href="/about">
-              <BsFillPersonFill />
+              <BsPersonVcard />
             </Link>
             <Link className="navLink" href="/contact">
-              <AiFillMail />
+              <AiOutlineMail />
             </Link>
           </div>
           <div onClick={unActiveButton} className="closeNav z-999"></div>
