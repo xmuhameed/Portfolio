@@ -1,3 +1,9 @@
+@import 'react-phone-number-input/style.css';
+:root {
+--PhoneInputCountryFlag-height: 15px;
+--PhoneInput-color--focus: none;
+
+}
 .content-page {
     padding-top: 11vh;
     margin-top: 10vh;
@@ -71,7 +77,8 @@ color: var(--Dark);
 .in-put:focus {
     outline: none;
 }
-.in-put::placeholder {
+.in-put::placeholder,
+.PhoneInputInput::placeholder {
     color: var(--Dark);
     opacity: 0.6;
 }
@@ -80,6 +87,14 @@ color: var(--Dark);
 }
 .form-p {
     width: 50%;
+}
+.PhoneInputInput {
+border: none;
+background-color: transparent;
+color: var(--Dark);
+}
+.PhoneInputInput:focus {
+outline: none;
 }
 @media (max-width: 1199px) {
 .form-p {
