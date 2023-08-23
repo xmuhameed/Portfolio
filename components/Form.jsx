@@ -3,8 +3,10 @@ import { useState } from "react";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import PhoneInput from "react-phone-number-input";
 
 export const Form = () => {
+  const [value, setValue] = useState();
   const [Mail, setMail] = useState(true)
   const contactToggler = (e) => {
     if (e.target.checked) {
@@ -13,6 +15,30 @@ export const Form = () => {
       setMail(true);
     }
   };
+let elementToRender = null;
+
+if (Mail) {
+  elementToRender = (
+    <input
+      className="in-put form-p email-input"
+      type={Mail ? "email" : "phone"}
+      placeholder={Mail ? "Your Email" : "Your Phone Number"}
+      name="from_contact"
+      id="email-toggle"
+    />
+  );
+} else {
+  elementToRender = (
+    <PhoneInput
+      placeholder="Your Phone Number"
+      value={value}
+      onChange={setValue}
+      className="in-put form-p email-input"
+      name="from_contact"
+      defaultCountry="EG"
+    />
+  );
+  }
 
  const form = useRef();
  const sendEmail = (e) => {
@@ -28,6 +54,7 @@ export const Form = () => {
      .then(
        (result) => {
          console.log(result.text);
+         e.target.reset();
        },
        (error) => {
          console.log(error.text);
@@ -46,13 +73,22 @@ return (
       placeholder="Your Name"
       name="from_name"
     />
-    <input
-      className="in-put form-p"
-      type="email"
+    {elementToRender}
+    {/* <input
+      className="in-put form-p email-input"
+      type={Mail ? "email" : "phone"}
       placeholder={Mail ? "Your Email" : "Your Phone Number"}
       name="from_contact"
       id="email-toggle"
-    />
+      /> */}
+    {/* <PhoneInput
+      placeholder="Your Phone Number"
+      value={value}
+      onChange={setValue}
+      className="in-put form-p email-input"
+      name="from_contact"
+      defaultCountry="EG"
+    /> */}
     <input
       type="checkbox"
       className="contact-input"
