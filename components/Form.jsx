@@ -33,7 +33,7 @@ if (Mail) {
       placeholder="Your Phone Number"
       value={value}
       onChange={setValue}
-      className="in-put form-p email-input"
+      className="in-put form-p phone-input"
       name="from_contact"
       defaultCountry="EG"
     />
