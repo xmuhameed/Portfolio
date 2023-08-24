@@ -73,6 +73,9 @@ body {
 .z-9999 {
   z-index: 9999;
 }
+.error-text {
+  color: var(--Dark);
+}
 .page-title {
   font-weight: 900;
   position: absolute;
