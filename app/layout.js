@@ -12,11 +12,13 @@ export const metadata = {
   name: "google-site-verification",
   content: "l9vy83RzifvaZrr9_U-WPISNubf1VBvoPGa78Ww9Djg",
 }
-
 export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="l9vy83RzifvaZrr9_U-WPISNubf1VBvoPGa78Ww9Djg" />
+      </head>
       <body className={inter.className}>
         <Navbar />
         <DarkMode />
