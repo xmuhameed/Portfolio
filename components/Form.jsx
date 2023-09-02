@@ -74,28 +74,13 @@ return (
       name="from_name"
     />
     {elementToRender}
-    {/* <input
-      className="in-put form-p email-input"
-      type={Mail ? "email" : "phone"}
-      placeholder={Mail ? "Your Email" : "Your Phone Number"}
-      name="from_contact"
-      id="email-toggle"
-      /> */}
-    {/* <PhoneInput
-      placeholder="Your Phone Number"
-      value={value}
-      onChange={setValue}
-      className="in-put form-p email-input"
-      name="from_contact"
-      defaultCountry="EG"
-    /> */}
     <input
       type="checkbox"
       className="contact-input"
       id="contact-toggle"
       onChange={contactToggler}
     />
-    <label className="contact_label" for="contact-toggle">
+    <label className="contact_label" htmlFor="contact-toggle">
       <AiOutlineMail className="email" size="1.5rem" />
       <AiOutlinePhone className="phone" size="1.5rem" />
     </label>

@@ -31,7 +31,7 @@ export const DarkMode = () => {
           id="darkmode-toggle"
           onChange={toggler}
         />
-        <label className="dark_mode_label" for="darkmode-toggle">
+        <label className="dark_mode_label" htmlFor="darkmode-toggle">
           <GoSun className="sun" size="2.5rem" />
           <GoMoon className="moon" size="2.5rem" />
         </label>

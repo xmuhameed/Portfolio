@@ -12,6 +12,7 @@ import { CgDatabase } from "react-icons/cg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 
 export const NavbarM = () => {
@@ -19,9 +20,36 @@ export const NavbarM = () => {
     Aos.init();
   }, []);
 
-    const [ButtonActive, setButtonActive] = useState(false)
-    const ActiveButton = () => {setButtonActive(true)};
-    const unActiveButton = () => {setButtonActive(false)};
+
+  const pathname = usePathname();
+  const [ButtonActive, setButtonActive] = useState(false);
+  const [ButtonActiveOnly, setButtonActiveOnly] = useState(true);
+
+
+  const handleNav = (e) => {
+    const links = Array.from(document.getElementsByClassName("nLM"));
+    links.forEach((link) => link.classList.remove("active"));
+    e.currentTarget.classList.add("active");
+  };
+  const handleNavref = () => {
+    Array.from(document.getElementsByClassName("nLM")).forEach((link) =>
+      link.classList.remove("active")
+    );
+    pathname === "/"
+      ? document.getElementById("home-link").classList.add("active")
+      : pathname === "/portfolio"
+      ? document.getElementById("portfolio-link").classList.add("active")
+      : pathname === "/about"
+      ? document.getElementById("about-link").classList.add("active")
+      : document.getElementById("contact-link").classList.add("active");
+  };
+
+  const ActiveButton = () => { setButtonActive(true)};
+  const unActiveButton = () => { setButtonActive(false) };
+  
+  useEffect(() => {
+    ButtonActive === true && handleNavref(); 
+  }, [ButtonActive]);
 
   return (
     <div>
@@ -35,21 +63,46 @@ export const NavbarM = () => {
             <AiOutlineClose size="3rem" />
           </button>
           <div
-            className="z-9999 position-absolute navLinksM"
+            className="z-9999 position-absolute navLinksM row justify-content-around"
             data-aos="fade-right"
           >
-            <Link className="navLink" href="/">
+            <Link
+              className="navLink nLM col-2"
+              id="home-link"
+              href="/"
+              onClick={handleNav}
+            >
               <AiOutlineHome />
+              <span nav-title="Home"></span>
             </Link>
-            <Link className="navLink" href="/portfolio">
+            <Link
+              className="navLink nLM col-2"
+              id="Portfolio-link"
+              href="/portfolio"
+              onClick={handleNav}
+            >
               <CgDatabase />
+              <span nav-title="Portfolio"></span>
             </Link>
-            <Link className="navLink" href="/about">
+            <Link
+              className="navLink nLM col-2"
+              id="about-link"
+              href="/about"
+              onClick={handleNav}
+            >
               <BsPersonVcard />
+              <span nav-title="About"></span>
             </Link>
-            <Link className="navLink" href="/contact">
+            <Link
+              className="navLink nLM col-2"
+              id="contact-link"
+              href="/contact"
+              onClick={handleNav}
+            >
               <AiOutlineMail />
+              <span nav-title="Contact"></span>
             </Link>
+            <span></span>
           </div>
           <div onClick={unActiveButton} className="closeNav z-999"></div>
         </>
