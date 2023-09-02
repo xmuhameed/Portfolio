@@ -121,9 +121,6 @@ display: none;
 .navLink:hover {
   color: var(--nav-l);
 }
-.nLM {
-  transition-delay: 0.3s
-}
 .active {
   z-index: 999;
   display: flex;
@@ -133,6 +130,7 @@ display: none;
   top: -20px;
   border-radius: 50%;
   transition: 0.5s;
+  transition-delay: 0.3s;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -183,26 +181,23 @@ display: none;
   -ms-transform: var(--contactspan);
   -o-transform: var(--contactspan);
 }
-.active + span::before {
+.active + span::before,
+.active + span::after {
   content: "";
   position: absolute;
   top: 42%;
-  left: -21.8px;
   width: 18px;
   height: 17px;
   background-color: var(--nav-bg);
+}
+.active + span::before {
+  left: -21.8px;
   border-top-right-radius: 20px;
   border-top-left-radius: 5px;
   box-shadow: 4px -6px 0 0 var(--navmob);
 }
 .active + span::after {
-  content: "";
-  position: absolute;
-  top: 42%;
   right: -21.8px;
-  width: 18px;
-  height: 17px;
-  background-color: var(--nav-bg);
   border-top-left-radius: 20px;
   border-top-right-radius: 5px;
   box-shadow: -4px -6px 0 0 var(--navmob);
@@ -211,7 +206,7 @@ display: none;
   content: attr(nav-title);
   position: absolute;
   font-size: 0.8rem;
-  bottom: -32px;
+  bottom: -36px;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);

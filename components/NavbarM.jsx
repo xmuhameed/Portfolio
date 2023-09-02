@@ -7,7 +7,7 @@ import {
   AiOutlineHome,
   AiOutlineMail,
 } from "react-icons/ai";
-import { BsPersonVcard } from "react-icons/bs";
+import { BsPersonVcard, BsTelephone } from "react-icons/bs";
 import { CgDatabase } from "react-icons/cg";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -23,7 +23,7 @@ export const NavbarM = () => {
 
   const pathname = usePathname();
   const [ButtonActive, setButtonActive] = useState(false);
-  const [ButtonActiveOnly, setButtonActiveOnly] = useState(true);
+  // const [ButtonActiveOnly, setButtonActiveOnly] = useState(true);
 
 
   const handleNav = (e) => {
@@ -77,7 +77,7 @@ export const NavbarM = () => {
             </Link>
             <Link
               className="navLink nLM col-2"
-              id="Portfolio-link"
+              id="portfolio-link"
               href="/portfolio"
               onClick={handleNav}
             >
@@ -99,7 +99,7 @@ export const NavbarM = () => {
               href="/contact"
               onClick={handleNav}
             >
-              <AiOutlineMail />
+              <BsTelephone />
               <span nav-title="Contact"></span>
             </Link>
             <span></span>
