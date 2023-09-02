@@ -23,13 +23,13 @@ export const NavbarM = () => {
 
   const pathname = usePathname();
   const [ButtonActive, setButtonActive] = useState(false);
-  // const [ButtonActiveOnly, setButtonActiveOnly] = useState(true);
 
 
   const handleNav = (e) => {
     const links = Array.from(document.getElementsByClassName("nLM"));
     links.forEach((link) => link.classList.remove("active"));
     e.currentTarget.classList.add("active");
+    setTimeout(() => setButtonActive(false),800)
   };
   const handleNavref = () => {
     Array.from(document.getElementsByClassName("nLM")).forEach((link) =>
