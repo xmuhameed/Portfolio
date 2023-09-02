@@ -147,7 +147,7 @@ display: none;
   height: 60px;
   position: absolute;
   background-color: #AEBDCA;
-  border: 5px solid white;
+  border: 5px solid var(--navmob);
   border-radius: 50%;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -193,7 +193,7 @@ display: none;
   background-color: var(--nav-bg);
   border-top-right-radius: 20px;
   border-top-left-radius: 5px;
-  box-shadow: 4px -6px 0 0 white;
+  box-shadow: 4px -6px 0 0 var(--navmob);
 }
 .active + span::after {
   content: "";
@@ -205,7 +205,7 @@ display: none;
   background-color: var(--nav-bg);
   border-top-left-radius: 20px;
   border-top-right-radius: 5px;
-  box-shadow: -4px -6px 0 0 white;
+  box-shadow: -4px -6px 0 0 var(--navmob);
 }
 .active span::before {
   content: attr(nav-title);
