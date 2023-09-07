@@ -32,10 +32,10 @@
 .contact-title + p {
     color: var(--Dark);
 }
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
 .contact-title {
    color: var(--Dark);
-   font-family: 'Bebas Neue', cursive;
+   /* font-family: 'Bebas Neue', cursive; */
    font-size: 5em;
    font-weight: 900;
    background-image: linear-gradient(var(--4), var(--4));

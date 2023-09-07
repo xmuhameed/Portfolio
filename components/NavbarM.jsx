@@ -5,7 +5,6 @@ import {
   AiOutlineAlignLeft,
   AiOutlineClose,
   AiOutlineHome,
-  AiOutlineMail,
 } from "react-icons/ai";
 import { BsPersonVcard, BsTelephone } from "react-icons/bs";
 import { CgDatabase } from "react-icons/cg";

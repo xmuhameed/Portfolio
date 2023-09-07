@@ -13,7 +13,7 @@ export const LandingContent = () => {
     Aos.init();
   }, []);
   return (
-    <div className="col-6 landing-content p-content z-99" data-aos="fade-up">
+    <div data-aos="fade-up" className="col-6 landing-content p-content z-99">
       <h1>Hi, i'm</h1>
       <h1>
         <span> Mohamed Mostafa</span>

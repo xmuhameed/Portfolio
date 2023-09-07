@@ -9,6 +9,7 @@ const loading = () => {
         src={loader}
         width={70}
         height={70}
+        alt='loder'
       />
     </div>
   );

@@ -8,16 +8,22 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "Mohamed's Portfolio",
-  description: 'Mohamed Mostafa Abdelkader Website',
+  description: "Mohamed Mostafa Abdelkader Website",
   name: "google-site-verification",
   content: "l9vy83RzifvaZrr9_U-WPISNubf1VBvoPGa78Ww9Djg",
-}
+  icons: {
+    icon: "../public/favicon.svg"
+  },
+};
 export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
       <head>
-        <meta name="google-site-verification" content="l9vy83RzifvaZrr9_U-WPISNubf1VBvoPGa78Ww9Djg" />
+        <meta
+          name="google-site-verification"
+          content="l9vy83RzifvaZrr9_U-WPISNubf1VBvoPGa78Ww9Djg"
+        />
       </head>
       <body className={inter.className}>
         <Navbar />

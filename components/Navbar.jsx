@@ -19,7 +19,7 @@ export default function Navbar() {
         </div>
         <div className="col-auto col-md-2 z-99 logo-holder">
           <Link href="/" className="logo">
-            <Image src={logo} alt="logo" className="logo" />
+            <Image src={logo} alt="logo" className="logo" priority={true} />
           </Link>
         </div>
         <div className="col-10 col-md-5 d-flex align-items-center justify-content-end z-99">
