@@ -26,7 +26,7 @@ export const LandingContent = () => {
       </Link>
       <a
         className="btn ms-3 resume"
-        href="https://www.mediafire.com/file/yk57y00rozzbrjp/Resume-Mo.pdf/file"
+        href="https://www.mediafire.com/file/lxm0k6dd4xsp2zd/my-cv.pdf/file"
         target="_blank"
       >
         Resume <AiOutlineDownload />
