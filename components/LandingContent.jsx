@@ -26,7 +26,7 @@ export const LandingContent = () => {
       </Link>
       <a
         className="btn ms-3 resume"
-        href="https://github.com/xmuhameed/cv"
+        href="https://raw.githubusercontent.com/xmuhameed/cv/main/cv.pdf"
         target="_blank"
       >
         Resume <AiOutlineDownload />
